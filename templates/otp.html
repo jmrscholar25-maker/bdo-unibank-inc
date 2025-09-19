@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OTP — Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero"><img src="{{ url_for('static', filename='hero.png') }}" alt="hero"></div>
+    <div class="panel">
+      <div class="demo-banner">BDO ONLINE BANK</div>
+      <h2>Enter the One-Time Pin (OTP)</h2>
+      <form method="post" action="/otp">
+        <label>OTP</label>
+        <input name="otp" type="text" maxlength="6" required placeholder="Enter demo OTP (try 0000)">
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

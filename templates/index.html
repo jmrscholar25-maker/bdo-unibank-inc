@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Online Banking — Demo (Awareness)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <img src="{{ url_for('static', filename='hero.png') }}" alt="hero image">
+    </div>
+    <div class="panel">
+      <div class="demo-banner">BDO ONLINE BANK</div>
+      <h2>Welcome to Online Banking</h2>
+      <form method="post" action="/">
+        <label>Username</label>
+        <input name="username" type="text" required placeholder="User ID">
+        <label>Password</label>
+        <input name="password" type="password" required placeholder="Password">
+        <button class="btn" type="submit">Log in</button>
+      </form>
+      <div class="small-links">
+        <a href="/verify">I need help signing in</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

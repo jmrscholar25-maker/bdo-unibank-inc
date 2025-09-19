@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Error — Demo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero"><img src="{{ url_for('static', filename='hero.png') }}" alt="hero"></div>
+    <div class="panel">
+      <div class="demo-banner">BDO ONLINE BANK</div>
+      <h2>OTP did not match</h2>
+      <p style="color:#b00020;">Double-check your OTP and try again.</p>
+      <a class="btn" href="/otp">Try again</a>
+    </div>
+  </div>
+</body>
+</html>

